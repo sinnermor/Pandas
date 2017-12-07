@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="templates/style.css">
+</head>
+<body>
+<div class="my-header">
+    <div class="my-header-head">
+        <div class="header-container">
+        <img src="http://juicep.ru/wp-content/uploads/2017/07/edin1-e1499441369908.jpg" width="50%" height="50%"/>
+        </div>
+        <div  class="header-container">
+            <h1 class="header-text">Analyze your code</h1>
+            </div>
+    </div>
+
+<h2>Found {{my_list.__len__()}} bugs</h2>
+    </div>
+<div>
+
+    <div class="layout-page-main">
+        {% set counter = 0 -%}
+        {% for el in my_list -%}
+        <div class="issues-workspace-list-item">
+            <div class="issues-workspace-list-component">
+                <div class="component-name text-ellipsis"><a class="link-no-underline"><span
+                        title="sources/app/controllers/BaseController.java">{{el['component']}}</span></a>
+                </div>
+            </div>
+            <div class="issue issue-with-checkbox selected" data-issue="AV_FQUYmJvm8d8Ck1NGs" role="listitem"
+                 tabindex="0">
+                <table class="issue-table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="issue-message">{{el['message']}}
+                                <!--<button class="button-link issue-rule icon-ellipsis-h little-spacer-left"-->
+                                        <!--aria-label="Rule Details"></button>-->
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="issue-table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <ul class="list-inline issue-meta-list">
+                       <!--         <li class="issue-meta"><span><span class="little-spacer-right"><svg
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path
+                                        d="M8 2C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm-.5 5.5h.9v.9h-.9v-.9zm-3.8.2c-.1 0-.2-.1-.2-.2 0-.4.1-1.2.6-2S5.3 4.2 5.6 4c.2 0 .3 0 .3.1l1.3 2.3c0 .1 0 .2-.1.2-.1.2-.2.3-.3.5-.1.2-.2.4-.2.5 0 .1-.1.2-.2.2l-2.7-.1zM9.9 12c-.3.2-1.1.5-2 .5-.9 0-1.7-.3-2-.5-.1 0-.1-.2-.1-.3l1.3-2.3c0-.1.1-.1.2-.1.2.1.3.1.5.1s.4 0 .5-.1c.1 0 .2 0 .2.1l1.3 2.3c.2.2.2.3.1.3zm2.5-4.1L9.7 8c-.1 0-.2-.1-.2-.2 0-.2-.1-.4-.2-.5 0-.1-.2-.3-.3-.4-.1 0-.1-.1-.1-.2l1.3-2.3c.1-.1.2-.1.3-.1.3.2 1 .7 1.5 1.5s.6 1.6.6 2c0 0-.1.1-.2.1z"
+                                        style="fill: currentcolor;"></path></svg></span>&lt;!&ndash; react-text: 11197 &ndash;&gt;{{el['type']}}
+                                    &lt;!&ndash; /react-text &ndash;&gt;</span></li>-->
+                                <li class="issue-meta"><span class="issue-meta-label-severity">{{el['severity']}}
+                                    <!-- /react-text --></span></li>
+                                <!--<li class="issue-meta">
+                                    <div class="bubble-popup-helper" tabindex="0" role="tooltip">
+                                        <button class="button-link issue-action issue-action-with-options js-issue-transition">
+                                    <span class="issue-meta-label little-spacer-right"><i
+                                            class="icon-status-open little-spacer-right"></i>&lt;!&ndash; react-text: 11207 &ndash;&gt;{{el['status']}}
+                                        &lt;!&ndash; /react-text &ndash;&gt;</span><i class="little-spacer-left icon-dropdown"></i>
+                                        </button>
+                                    </div>
+                                </li>-->
+                                <!--<li class="issue-meta">
+                                    <div class="bubble-popup-helper" tabindex="0" role="tooltip">
+                                        <button class="button-link issue-action issue-action-with-options js-issue-assign">
+                                            <span><span class="issue-meta-label">Not assigned</span></span><i
+                                                class="little-spacer-left icon-dropdown"></i></button>
+                                    </div>
+                                </li>-->
+                                <li class="issue-meta"><span class="issue-meta-label">{{el['effort']}} effort</span></li>
+                            <!--    <li class="issue-meta">
+                                    <div class="bubble-popup-helper" tabindex="0" role="tooltip">
+                                        <button class="button-link issue-action js-issue-comment"><span
+                                                class="issue-meta-label">Comment</span></button>
+                                    </div>
+                                </li>-->
+                            </ul>
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+                <a class="issue-navigate js-issue-navigate"><i class="issue-navigate-to-left icon-chevron-left"></i><i
+                        class="issue-navigate-to-right icon-chevron-right"></i></a><a
+                    class="js-toggle issue-checkbox-container"
+                    href="#"><i
+                    class="issue-checkbox icon-checkbox"></i></a></div>
+        </div>
+        {% set counter = counter + 1 -%}
+        {% endfor -%}
+    </div>
+
+</div>
+</body>
+</html>
