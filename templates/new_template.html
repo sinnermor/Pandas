@@ -8,16 +8,24 @@
 <body>
 <div class="my-header">
     <div class="my-header-head">
-        <div class="header-container">
-        <img src="http://juicep.ru/wp-content/uploads/2017/07/edin1-e1499441369908.jpg" width="50%" height="50%"/>
+        <div class="header-container-logo">
+            <a class="NavPanel__nav-logo--kXErO active" aria-current="true" href="/"><span><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="" size="24"><path
+                    fill="#4BC126" fill-rule="evenodd"
+                    d="M6.35 23A2.355 2.355 0 0 1 4 20.646l.005-18.281A2.364 2.364 0 0 1 7.609.35L19 6.92c.796.393 1.324 1.252 1.324 2.21 0 .814-.413 1.588-1.106 2.072l-9.766 5.666a1 1 0 0 1-1.502-.866V6.946a1 1 0 0 1 1.497-.867l4.265 2.442a1 1 0 1 1-.994 1.735L9.95 8.671v5.596l8.194-4.75a.56.56 0 0 0 .18-.387.48.48 0 0 0-.27-.448L6.582 2.065c-.283-.173-.575.026-.576.3L6 20.588c0 .347.32.495.54.358l13.224-7.634a.999.999 0 1 1 1 1.732L7.568 22.662A2.333 2.333 0 0 1 6.35 23">
+
+          </path></svg></span><span>Деловая среда</span></a>
         </div>
-        <div  class="header-container">
-            <h1 class="header-text">Analyze your code</h1>
-            </div>
+
+            <h1 class="header-text">Your code analizator</h1>
     </div>
 
-<h2>Found {{my_list.__len__()}} bugs</h2>
-    </div>
+    <h2>Found {{my_list.__len__()}} bugs</h2>
+    <h3 class="bugs_count">Found bug CRITICAL - {{bugs['critical']}}, MAJOR - {{bugs['major']}}, MINOR -
+        {{bugs['minor']}}, INFO -
+        {{bugs['info']}}</h3>
+
+</div>
 <div>
 
     <div class="layout-page-main">
@@ -37,7 +45,7 @@
                         <td>
                             <div class="issue-message">{{el['message']}}
                                 <!--<button class="button-link issue-rule icon-ellipsis-h little-spacer-left"-->
-                                        <!--aria-label="Rule Details"></button>-->
+                                <!--aria-label="Rule Details"></button>-->
                             </div>
                         </td>
                     </tr>
@@ -48,11 +56,11 @@
                     <tr>
                         <td>
                             <ul class="list-inline issue-meta-list">
-                       <!--         <li class="issue-meta"><span><span class="little-spacer-right"><svg
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path
-                                        d="M8 2C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm-.5 5.5h.9v.9h-.9v-.9zm-3.8.2c-.1 0-.2-.1-.2-.2 0-.4.1-1.2.6-2S5.3 4.2 5.6 4c.2 0 .3 0 .3.1l1.3 2.3c0 .1 0 .2-.1.2-.1.2-.2.3-.3.5-.1.2-.2.4-.2.5 0 .1-.1.2-.2.2l-2.7-.1zM9.9 12c-.3.2-1.1.5-2 .5-.9 0-1.7-.3-2-.5-.1 0-.1-.2-.1-.3l1.3-2.3c0-.1.1-.1.2-.1.2.1.3.1.5.1s.4 0 .5-.1c.1 0 .2 0 .2.1l1.3 2.3c.2.2.2.3.1.3zm2.5-4.1L9.7 8c-.1 0-.2-.1-.2-.2 0-.2-.1-.4-.2-.5 0-.1-.2-.3-.3-.4-.1 0-.1-.1-.1-.2l1.3-2.3c.1-.1.2-.1.3-.1.3.2 1 .7 1.5 1.5s.6 1.6.6 2c0 0-.1.1-.2.1z"
-                                        style="fill: currentcolor;"></path></svg></span>&lt;!&ndash; react-text: 11197 &ndash;&gt;{{el['type']}}
-                                    &lt;!&ndash; /react-text &ndash;&gt;</span></li>-->
+                                <!--         <li class="issue-meta"><span><span class="little-spacer-right"><svg
+                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path
+                                                 d="M8 2C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm-.5 5.5h.9v.9h-.9v-.9zm-3.8.2c-.1 0-.2-.1-.2-.2 0-.4.1-1.2.6-2S5.3 4.2 5.6 4c.2 0 .3 0 .3.1l1.3 2.3c0 .1 0 .2-.1.2-.1.2-.2.3-.3.5-.1.2-.2.4-.2.5 0 .1-.1.2-.2.2l-2.7-.1zM9.9 12c-.3.2-1.1.5-2 .5-.9 0-1.7-.3-2-.5-.1 0-.1-.2-.1-.3l1.3-2.3c0-.1.1-.1.2-.1.2.1.3.1.5.1s.4 0 .5-.1c.1 0 .2 0 .2.1l1.3 2.3c.2.2.2.3.1.3zm2.5-4.1L9.7 8c-.1 0-.2-.1-.2-.2 0-.2-.1-.4-.2-.5 0-.1-.2-.3-.3-.4-.1 0-.1-.1-.1-.2l1.3-2.3c.1-.1.2-.1.3-.1.3.2 1 .7 1.5 1.5s.6 1.6.6 2c0 0-.1.1-.2.1z"
+                                                 style="fill: currentcolor;"></path></svg></span>&lt;!&ndash; react-text: 11197 &ndash;&gt;{{el['type']}}
+                                             &lt;!&ndash; /react-text &ndash;&gt;</span></li>-->
                                 <li class="issue-meta"><span class="issue-meta-label-severity">{{el['severity']}}
                                     <!-- /react-text --></span></li>
                                 <!--<li class="issue-meta">
@@ -71,13 +79,14 @@
                                                 class="little-spacer-left icon-dropdown"></i></button>
                                     </div>
                                 </li>-->
-                                <li class="issue-meta"><span class="issue-meta-label">{{el['effort']}} effort</span></li>
-                            <!--    <li class="issue-meta">
-                                    <div class="bubble-popup-helper" tabindex="0" role="tooltip">
-                                        <button class="button-link issue-action js-issue-comment"><span
-                                                class="issue-meta-label">Comment</span></button>
-                                    </div>
-                                </li>-->
+                                <li class="issue-meta"><span class="issue-meta-label">{{el['effort']}} effort</span>
+                                </li>
+                                <!--    <li class="issue-meta">
+                                        <div class="bubble-popup-helper" tabindex="0" role="tooltip">
+                                            <button class="button-link issue-action js-issue-comment"><span
+                                                    class="issue-meta-label">Comment</span></button>
+                                        </div>
+                                    </li>-->
                             </ul>
                         </td>
 

@@ -12,8 +12,21 @@ app = Flask(__name__)
 
 json_data = json.load(open('data/AnalyzingSourceCode.json'))
 items = json_data['issues']
+minor = 0
+major = 0
+critical = 0
+info = 0
+for el1 in items:
+    sev = el1.get('severity')
+    if sev=='MINOR':
+        minor = minor + 1
+    elif sev == "MAJOR":
+        major = major + 1
+    elif sev == "CRITICAL":
+        critical = critical + 1
+    else: info = info + 1
 
-# @app.route("/")
+bug_count = {"info": info, "minor": minor, "major": major, "critical": critical}
 # def template_test():
 #     return render_template('templates/new_template.html', my_list=items)
 
@@ -32,7 +45,8 @@ def create_index_html():
     fname = "output.html"
 
     context = {
-        'my_list': items
+        'my_list': items,
+        'bugs': bug_count,
     }
     #
     with open(fname, 'w') as f:

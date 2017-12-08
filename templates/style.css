@@ -1,26 +1,55 @@
 h1{
-    color: #086608;
-
-    margin-top: 80px;
     }
 h2{
     color: red;
     padding-right: 20px;
-    margin: 30px;
+    margin: 20px;
     }
+h3{
+    padding-right: 20px;
+    margin: 20px;
+    }
+.NavPanel__nav-logo--kXErO active{
+    position: relative;
+    width: 240px;
+    height: 72px;
+    padding-left: 30px;
+    display: inline;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+.NavPanel__nav-logo--kXErO span {
+    font-family: LetoSans, sans-serif;
+    font-size: 22px;
+    line-height: 23px;
+    padding-left: 5px;
+    background-image: linear-gradient(to right, #15b639, #8dd010);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .my-header{
-  margin: 10px,10px,10px,10px;
+  margin: 20px;
     }
 .my-header-head{
     overflow: auto;
 }
-.header-container{
+.header-container-logo{
     width:auto;
     display: inline-block;
-    margin:auto;
+    margin-right: 10px ;
+    margin-top: 5px;
     float: left;
+}
+.header-container{
+    display: inline-block;
+    margin-right: 130px ;
     }
 .header-text{
+    padding-right: 20px;
+
     }
 .no-close .ui-dialog-titlebar-close {
   display: none;
@@ -1297,27 +1326,7 @@ small,
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
 }
-/*
- * SonarQube
- * Copyright (C) 2009-2017 SonarSource SA
- * mailto:info AT sonarsource DOT com
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */
 a {
-  border-bottom: 1px solid #cae3f2;
   color: #236a97;
   cursor: pointer;
   outline: none;
