@@ -1,10 +1,8 @@
 import json
 
 import os
-from weasyprint import HTML
 from jinja2 import Environment, FileSystemLoader
 from flask import Flask, render_template
-import pandas as pd
 
 
 app = Flask(__name__)
@@ -27,8 +25,7 @@ for el1 in items:
     else: info = info + 1
 
 bug_count = {"info": info, "minor": minor, "major": major, "critical": critical}
-# def template_test():
-#     return render_template('templates/new_template.html', my_list=items)
+
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_ENVIRONMENT = Environment(
